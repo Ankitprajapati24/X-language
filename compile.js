@@ -25,13 +25,22 @@ function lexer(input){
             }
             continue;
         }
+
+        //Tokenize operators and equal sign
+        if(/[\+\-\*\/=]/.test(char)){
+            tokens.push({type: 'operator',value : char});
+            cursor++;
+            continue;
+        }
     }
+    return tokens;
 }
 
 
 function compiler(input){
     const tokens = lexer(input);
+    console.log(tokens)
 }
 
-
+compiler(code)
 
