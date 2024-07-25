@@ -42,5 +42,15 @@ function compiler(input){
     console.log(tokens)
 }
 
+
+const code = `
+su x = 10
+su y = 20
+su sum = x+y
+
+write sum
+`
+
 compiler(code)
 
+// 
